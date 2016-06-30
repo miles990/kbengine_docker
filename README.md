@@ -5,9 +5,17 @@ A [KBEngine](https://github.com/kbengine/kbengine) docker image.
 - Centos 7
 - KBEngine v0.8.2
 
+## Required
+- MySQL
+	- [Install MySQL via docker](https://github.com/diyan/mycli-docker)
+
+- [mycli(Optional)](https://github.com/diyan/mycli-docker)
+	- A terminal client for MySQL with autoCompletion and syntax highlighting
+
+
 ## Run
 `
-docker run --rm -it miles990/kbengine_docker /bin/sh
+docker run --rm -it --name=server --link=mysql:mysql miles990/kbengine_docker
 `
 
 
